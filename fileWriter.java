@@ -15,8 +15,10 @@ public class fileWriter {
     public static String generateRandomString() {
         String fileName = "";
         for (int i = 0; i < 5; i++) {
-            fileName += (((int) (Math.random() * 9) + 1) + ((char) ((int) (Math.random() * 126) + 10)));
+            int ranNum = (int) (Math.random() * 9) + 1;
+            char ranChar = (char) ((int) (Math.random() * 125) + 11);
+            fileName += (ranNum + "" + ranChar);
         }
-        return fileName;
+        return fileName + ".txt";
     }
 }
