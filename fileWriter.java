@@ -1,6 +1,9 @@
 import java.io.PrintWriter;
 import java.io.FileNotFoundException;
 
+//file writer class uses PrintWriter to create a new text file with a given fileName that is passed into the method writeText
+//writeText prints a given message onto a text file
+//generate random string uses math.random to generate a unique filename for the new file that is going to created using printwriter
 public class fileWriter {
     public static void main(String[] args) throws FileNotFoundException {
         writeText(generateRandomString());
