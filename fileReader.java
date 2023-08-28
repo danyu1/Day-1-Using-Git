@@ -20,4 +20,14 @@ public class fileReader {
         br.close();
         return textRead;
     }
+
+    public int countChar(String fileName) throws IOException {
+        int charCount = 0;
+        BufferedReader reader = new BufferedReader(new FileReader(fileName));
+        while (reader.read() != -1) {
+            charCount++;
+        }
+        reader.close();
+        return charCount;
+    }
 }
